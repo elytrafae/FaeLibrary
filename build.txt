@@ -1,0 +1,3 @@
+displayName = Fae's Library
+author = elytrafae
+version = 0.1

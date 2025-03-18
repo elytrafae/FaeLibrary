@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Terraria;
 using Terraria.ModLoader;
 
 namespace FaeLibrary.Implementation {
@@ -19,6 +20,14 @@ namespace FaeLibrary.Implementation {
             SummonSpeed = new();
             SummonTagEffectiveness = new();
         }
+
+    }
+
+    public static class FaeLibPlayerExtensions {
+
+        public static ref StatModifier GetRangedVelocity(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().RangedVelocity;
+        public static ref StatModifier GetSummonSpeed(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().SummonSpeed;
+        public static ref StatModifier GetSummonTagEffectiveness(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().SummonTagEffectiveness;
 
     }
 }

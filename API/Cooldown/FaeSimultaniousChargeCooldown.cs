@@ -89,5 +89,15 @@ namespace FaeLibrary.API.Cooldown
             }
             return count;
         }
+
+        public int GetCurrentCooldownTicks() {
+            int maxTime = -1;
+            for (int i = 0; i < Charges; i++) {
+                if (CooldownTimers[i] < CooldownTicks && maxTime < CooldownTimers[i]) { 
+                    maxTime = CooldownTimers[i];
+                }
+            }
+            return maxTime > -1 ? maxTime : CooldownTicks;
+        }
     }
 }

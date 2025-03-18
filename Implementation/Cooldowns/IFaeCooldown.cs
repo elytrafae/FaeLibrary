@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FaeLibrary.Implementation.Cooldowns
 {
-    internal interface IFaeCooldown {
+    public interface IFaeCooldown {
 
         public abstract int CooldownTicks { get; }
         public abstract int DisplayCooldownTicks { get; }
@@ -23,6 +23,7 @@ namespace FaeLibrary.Implementation.Cooldowns
         public abstract bool ConsumeCharge();
         public abstract void OnGainedCharge();
         public abstract int GetCurrentCharges();
+        public abstract int GetCurrentCooldownTicks();
 
     }
 }

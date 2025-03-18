@@ -58,12 +58,22 @@ namespace FaeLibrary.API.Cooldown
             CooldownTimer += GetCooldownTickRate();
             if (CooldownTimer >= CooldownTicks) {
                 CurrentCharges += ChargesFilledPerCooldownPeriod;
+                CooldownTimer -= CooldownTicks;
                 OnGainedCharge();
             }
         }
 
         public int GetCurrentCharges() {
             return CurrentCharges;
+        }
+
+        public int GetCurrentCooldownTicks() {
+            return CooldownTimer;
+        }
+
+        public void CompletelyResetCooldown() {
+            CooldownTimer = 0;
+            CurrentCharges = 0;
         }
     }
 }

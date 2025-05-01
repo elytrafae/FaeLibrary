@@ -5,7 +5,9 @@ ItemConditions: {
 	IsWhipWeapon: Whips
 	IsRangedWeapon: Ranged Weapons
 	IsMagicWeapon: Magic Weapons
-	IsSummonWeapon: Summon Weapons
+	IsSummonerWeapon: Summoner Weapons
+	IsMinionWeapon: Minions
+	IsSentryWeapon: Sentries
 	IsAccessory: Accessories
 	GrammaticalAnd: "{0} and {1}"
 	GrammaticalAnd3: "{0}, {1} and {2}"

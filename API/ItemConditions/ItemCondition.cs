@@ -17,12 +17,14 @@ namespace FaeLibrary.API.ItemConditions {
         public static LocalizedText QuickName(string name) => Language.GetOrRegister($"Mods.{nameof(FaeLibrary)}.ItemConditions.{name}");
 
         public static readonly ItemCondition Any = new(QuickName(nameof(Any)), (item) => true);
-        public static readonly ItemCondition IsWeapon = new(QuickName(nameof(IsWeapon)), (Item item) => item.damage > 0 && item.ammo == AmmoID.None);
+        public static readonly ItemCondition IsWeapon = new(QuickName(nameof(IsWeapon)), (Item item) => item.damage > 0 && item.useStyle != ItemUseStyleID.None);
         public static readonly ItemCondition IsMeleeWeapon = new(QuickName(nameof(IsMeleeWeapon)), (Item item) => item.DamageType.CountsAsClass(DamageClass.Melee) && IsWeapon.IsMet(item));
         public static readonly ItemCondition IsWhipWeapon = new(QuickName(nameof(IsWhipWeapon)), (Item item) => item.DamageType.CountsAsClass(DamageClass.SummonMeleeSpeed) && IsWeapon.IsMet(item));
         public static readonly ItemCondition IsRangedWeapon = new(QuickName(nameof(IsRangedWeapon)), (Item item) => item.DamageType.CountsAsClass(DamageClass.Ranged) && IsWeapon.IsMet(item));
         public static readonly ItemCondition IsMagicWeapon = new(QuickName(nameof(IsMagicWeapon)), (Item item) => item.DamageType.CountsAsClass(DamageClass.Magic) && IsWeapon.IsMet(item));
-        public static readonly ItemCondition IsSummonWeapon = new(QuickName(nameof(IsSummonWeapon)), (Item item) => item.DamageType.CountsAsClass(DamageClass.Summon) && !IsWhipWeapon.IsMet(item) && IsWeapon.IsMet(item));
+        public static readonly ItemCondition IsSummonerWeapon = new(QuickName(nameof(IsSummonerWeapon)), (Item item) => item.DamageType.CountsAsClass(DamageClass.Summon) && IsWeapon.IsMet(item));
+        public static readonly ItemCondition IsMinionWeapon = new(QuickName(nameof(IsMinionWeapon)), (Item item) => item.DamageType.CountsAsClass(DamageClass.Summon) && !item.sentry && item.shoot > ProjectileID.None && !ProjectileID.Sets.IsAWhip[item.shoot]);
+        public static readonly ItemCondition IsSentryWeapon = new(QuickName(nameof(IsSentryWeapon)), (Item item) => item.sentry);
         public static readonly ItemCondition IsAccessory = new(QuickName(nameof(IsAccessory)), (Item item) => item.accessory);
 
         // Logical

@@ -18,13 +18,13 @@ namespace FaeLibrary.API.Cooldown
 
         public sealed override void SetupContent() {
             SetStaticDefaults();
-            CooldownTimers = new List<int>(Charges);
+            CooldownTimers = new List<int>();
             int chargesToBeFilled = Math.Min(ChargesFilledWhenEnteringWorld, Charges);
             for (int i = 0; i < chargesToBeFilled; i++) {
-                CooldownTimers[i] = CooldownTicks;
+                CooldownTimers.Add(CooldownTicks);
             }
             for (int i = chargesToBeFilled; i < Charges; i++) {
-                CooldownTimers[i] = 0;
+                CooldownTimers.Add(0);
             }
         }
 

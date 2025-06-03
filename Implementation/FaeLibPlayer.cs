@@ -15,12 +15,22 @@ namespace FaeLibrary.Implementation {
         public StatModifier RangedVelocity = new();
         public StatModifier SummonSpeed = new();
         public StatModifier SummonTagEffectiveness = new();
+        public StatModifier WingTime = new();
 
         public override void ResetEffects() {
             RangedVelocity = new();
             SummonSpeed = new();
             SummonTagEffectiveness = new();
+            WingTime = new();
             ResetMountStatBuffs();
+        }
+
+        public override void PostUpdateMiscEffects() {
+            Player.wingTimeMax = (int)WingTime.ApplyTo(Player.wingTimeMax);
+
+            // Rocket flight time, for some reason, is not actually reset, so I cannot do this.
+            // Rocket time stacking with flight time is also kinda weird the moment you try to add flat/base time...
+            //Player.rocketTimeMax = (int)FlightTime.ApplyTo(Player.rocketTimeMax);
         }
 
         public override void UpdateLifeRegen() {
@@ -60,6 +70,7 @@ namespace FaeLibrary.Implementation {
         public static ref StatModifier GetRangedVelocity(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().RangedVelocity;
         public static ref StatModifier GetSummonSpeed(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().SummonSpeed;
         public static ref StatModifier GetSummonTagEffectiveness(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().SummonTagEffectiveness;
+        public static ref StatModifier GetWingTimeStat(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().WingTime;
 
 
         public static ref StatModifier GetMountAcceleration(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().MountAcceleration;

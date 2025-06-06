@@ -16,13 +16,22 @@ namespace FaeLibrary.Implementation {
         public StatModifier SummonSpeed = new();
         public StatModifier SummonTagEffectiveness = new();
         public StatModifier WingTime = new();
+        public StatModifier[] ItemSizes = [];
 
         public override void ResetEffects() {
             RangedVelocity = new();
             SummonSpeed = new();
             SummonTagEffectiveness = new();
             WingTime = new();
+            ResetDamageClassRelatedEffects();
             ResetMountStatBuffs();
+        }
+
+        private void ResetDamageClassRelatedEffects() {
+            ItemSizes = new StatModifier[DamageClassLoader.DamageClassCount];
+            for (int i = 0; i < DamageClassLoader.DamageClassCount; i++) {
+                ItemSizes[i] = new StatModifier();
+            }
         }
 
         public override void PostUpdateMiscEffects() {
@@ -65,20 +74,4 @@ namespace FaeLibrary.Implementation {
 
     }
 
-    public static class FaeLibPlayerExtensions {
-
-        public static ref StatModifier GetRangedVelocity(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().RangedVelocity;
-        public static ref StatModifier GetSummonSpeed(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().SummonSpeed;
-        public static ref StatModifier GetSummonTagEffectiveness(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().SummonTagEffectiveness;
-        public static ref StatModifier GetWingTimeStat(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().WingTime;
-
-
-        public static ref StatModifier GetMountAcceleration(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().MountAcceleration;
-        public static ref StatModifier GetMountDashSpeed(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().MountDashSpeed;
-        public static ref StatModifier GetMountRunSpeed(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().MountRunSpeed;
-        public static ref StatModifier GetMountJumpHeight(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().MountJumpHeight;
-        public static ref StatModifier GetMountJumpSpeed(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().MountJumpSpeed;
-        public static ref StatModifier GetMountFallDamage(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().MountFallDamage;
-
-    }
 }

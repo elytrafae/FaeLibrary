@@ -39,9 +39,4 @@ namespace FaeLibrary.Implementation
 
     }
 
-    public static class FaeLibProjectileExtensions {
-
-        public static bool TryGetSourceNPC(this Projectile projectile, out NPC npc) => projectile.GetGlobalProjectile<FaeLibProjectile>().TryGetSourceNPC(out npc);
-
-    }
 }

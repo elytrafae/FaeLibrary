@@ -1,1 +1,9 @@
-Modify this file with a description of your mod.
+This is a Library mod that I wanna use to make mods.
+
+However, other mod developers may find the library's features useful as well, such as:
+- Additional player stats (ranged velocity, summon speed, summon effectiveness, mount stats, melee size etc)
+- System to fetch the NPC that created a given projectile, if it exists
+- Lots of projectile hooks, like dynamically adjusting summon tag effectiveness, tick rate, or dynamically updating damage/crit/armorpen of "Continously Updating" projectiles
+- An Item Condition system
+- A custom item slot implementation, able to fully control what can and cannot go into the slot
+- And more!

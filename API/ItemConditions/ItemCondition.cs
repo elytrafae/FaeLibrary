@@ -14,7 +14,7 @@ namespace FaeLibrary.API.ItemConditions {
         public ItemCondition(Mod mod, string name, Func<Item, bool> Predicate) : this(mod.GetLocalization($"ItemConditions.{name}"), Predicate) { }
         public bool IsMet(Item item) => Predicate(item);
 
-        public static LocalizedText QuickName(string name) => Language.GetOrRegister($"Mods.{nameof(FaeLibrary)}.ItemConditions.{name}");
+        internal static LocalizedText QuickName(string name) => Language.GetOrRegister($"Mods.{nameof(FaeLibrary)}.ItemConditions.{name}");
 
         public static readonly ItemCondition Any = new(QuickName(nameof(Any)), (item) => true);
         public static readonly ItemCondition IsWeapon = new(QuickName(nameof(IsWeapon)), (Item item) => item.damage > 0 && item.useStyle != ItemUseStyleID.None);

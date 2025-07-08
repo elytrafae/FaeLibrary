@@ -22,10 +22,10 @@ namespace FaeLibrary.API
 
         /// <summary>
         /// Allows you to force certain projectiles to be affected by summon tag bonuses or not.
-        /// NOTE: Under the hood this is done by changing what <see cref="Projectile.IsMinionOrSentryRelated"/> returns.
+        /// NOTE: Under the hood this is done by changing what <see cref="Projectile.IsMinionOrSentryRelated"/> returns, as well as patching vanilla. Anything not using this for tag bonuses... Use standard stuff pls.
         /// </summary>
         /// <param name="projectile">The affected projectile</param> 
-        /// <returns>Return null if you want to let vanilla behaviour through, true if you want this projectile to count for tag bonuses, and false if you don't want it to count</returns>
+        /// <returns>Return null if you want to let vanilla behavior through, true if you want this projectile to count for tag bonuses, and false if you don't want it to count</returns>
         public virtual bool? CanBenefitFromSummonTagBonuses(Projectile projectile) { return null; }
 
         /// <summary>

@@ -17,7 +17,6 @@ namespace FaeLibrary.API.ClassExtensions {
 
         public static ref StatModifier GetItemSizeStat<T>(this Player player) where T : DamageClass => ref player.GetItemSizeStat(ModContent.GetInstance<T>());
         public static ref StatModifier GetItemSizeStat(this Player player, DamageClass dmgClass) => ref player.GetModPlayer<FaeLibPlayer>().ItemSizes[dmgClass.Type];
-        //public static ref StatModifier GetMeleeScale(this Player player) => ref player.GetItemSizeStat(DamageClass.Melee);
 
 
         public static ref StatModifier GetMountAcceleration(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().MountAcceleration;

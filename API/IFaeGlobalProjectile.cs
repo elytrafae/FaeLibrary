@@ -43,5 +43,32 @@ namespace FaeLibrary.API
         /// <param name="projectile">The affected projectile</param> 
         public virtual void IgnoreExtraUpdatesBeforeAI(Projectile projectile) { }
 
+        /// <summary>
+        /// Allows you to dynamically update the damage of minions, sentries and all "Continuously Updating" projectiles
+        /// based on more than just the damage stat of the player!
+        /// </summary>
+        /// <param name="projectile">The affected projectile</param> 
+        /// <param name="owner">The owner of the projectile</param>
+        /// <param name="damage">The damage StatModifier used for this projectile</param>
+        public virtual void ModifyContinuouslyUpdatingDamage(Projectile projectile, Player owner, ref StatModifier damage) { }
+
+        /// <summary>
+        /// Allows you to dynamically update the crit chance of minions, sentries and all "Continuously Updating" projectiles
+        /// based on more than just the crit stat of the player!
+        /// </summary>
+        /// <param name="projectile">The affected projectile</param> 
+        /// <param name="owner">The owner of the projectile</param>
+        /// <param name="crit">The crit chance used for this projectile</param>
+        public virtual void ModifyContinuouslyUpdatingCritChance(Projectile projectile, Player owner, ref float crit) { }
+
+        /// <summary>
+        /// Allows you to dynamically update the armor penetration of minions, sentries and all "Continuously Updating" projectiles
+        /// based on more than just the armor penetration stat of the player!
+        /// </summary>
+        /// <param name="projectile">The affected projectile</param> 
+        /// <param name="owner">The owner of the projectile</param>
+        /// <param name="armorpen">The armor penetration used for this projectile</param>
+        public virtual void ModifyContinuouslyUpdatingArmorPenetration(Projectile projectile, Player owner, ref float armorpen) { }
+
     }
 }

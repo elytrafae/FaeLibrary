@@ -42,8 +42,8 @@ namespace FaeLibrary.Implementation.Detours {
                 ProjectileID.Sets.SummonTagDamageMultiplier[self.type] = modifier.ApplyTo(oldNr);
                 try {
                     orig(self);
-                } catch {
-                    // Ignore errors IG
+                } catch (Exception e) {
+                    Console.Error.WriteLine("Error while applying summon tag effectiveness changes: {}", e);
                 }
                 ProjectileID.Sets.SummonTagDamageMultiplier[self.type] = oldNr;
             } else {

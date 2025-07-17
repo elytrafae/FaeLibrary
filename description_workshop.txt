@@ -8,4 +8,4 @@ However, other mod developers may find the library's features useful as well, su
 - A custom item slot implementation, able to fully control what can and cannot go into the slot
 - And more!
 
-Check out the GitHub for Documentation!
+[url=https://github.com/elytrafae/FaeLibrary/wiki]Check out the GitHub for Documentation![/url]

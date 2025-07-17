@@ -1,3 +1,4 @@
 displayName = Fae's Library
 author = elytrafae
-version = 0.1
+version = 1.0
+homepage = https://github.com/elytrafae/FaeLibrary/wiki

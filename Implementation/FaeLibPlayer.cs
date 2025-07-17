@@ -16,13 +16,25 @@ namespace FaeLibrary.Implementation {
         public StatModifier SummonSpeed = new();
         public StatModifier SummonTagEffectiveness = new();
         public StatModifier WingTime = new();
+        public StatModifier PotionHealEffectiveness = new();
+        public StatModifier PotionManaEffectiveness = new();
+        public int PositiveRegen = 0;
+        public int NegativeRegen = 0;
+        public bool DisabledPositiveRegen = false;
+
         public StatModifier[] ItemSizes = [];
+        
 
         public override void ResetEffects() {
             RangedVelocity = new();
             SummonSpeed = new();
             SummonTagEffectiveness = new();
             WingTime = new();
+            PotionHealEffectiveness = new();
+            PotionManaEffectiveness = new();
+            PositiveRegen = 0;
+            NegativeRegen = 0;
+            DisabledPositiveRegen = false;
             ResetDamageClassRelatedEffects();
             ResetMountStatBuffs();
         }
@@ -43,6 +55,7 @@ namespace FaeLibrary.Implementation {
         }
 
         public override void UpdateLifeRegen() {
+            Player.lifeRegen += PositiveRegen;
             for (int i = 0; i < Player.MaxBuffs; i++) {
                 if (Player.buffTime[i] > 0) { // There is a buff here
                     ModBuff modBuff = ModContent.GetModBuff(Player.buffType[i]);
@@ -57,6 +70,10 @@ namespace FaeLibrary.Implementation {
         }
 
         public override void UpdateBadLifeRegen() {
+            if (DisabledPositiveRegen && Player.lifeRegen > 0) {
+                Player.lifeRegen = 0;
+            }
+            Player.lifeRegen -= NegativeRegen;
             for (int i = 0; i < Player.MaxBuffs; i++) {
                 if (Player.buffTime[i] > 0) { // There is a buff here
                     ModBuff modBuff = ModContent.GetModBuff(Player.buffType[i]);
@@ -65,6 +82,14 @@ namespace FaeLibrary.Implementation {
                     }
                 }
             }
+        }
+
+        public override void GetHealLife(Item item, bool quickHeal, ref int healValue) {
+            healValue = (int)PotionHealEffectiveness.ApplyTo(healValue);
+        }
+
+        public override void GetHealMana(Item item, bool quickHeal, ref int healValue) {
+            healValue = (int)PotionManaEffectiveness.ApplyTo(healValue);
         }
 
         public override void PostUpdate() {

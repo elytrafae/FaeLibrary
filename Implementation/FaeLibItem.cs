@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FaeLibrary.API.ClassExtensions;
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace FaeLibrary.Implementation {

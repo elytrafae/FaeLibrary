@@ -20,7 +20,15 @@ namespace FaeLibrary.API {
         public virtual void OnDodge(Player.HurtInfo info, DodgeType dodgeType) {
         }
 
-        // TODO: Add a system that is able to add new hooks to the game
-        // Ideas for hooks: Change the chance of an Underground Fairy spawning
+        /// <summary>
+        /// This is called whenever a potion is consumed, and allows 
+        /// you to modify its initial potion delay.
+        /// NOTE: This is frontloaded, so if you modify this depending on a condition, the delay won't update accordingly!
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="delay"></param>
+        public virtual void ModifyPotionDelay(Item item, ref int delay) { 
+            
+        }
     }
 }

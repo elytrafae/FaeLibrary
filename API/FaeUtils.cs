@@ -1,4 +1,5 @@
-﻿using Terraria.ID;
+﻿using Microsoft.Xna.Framework;
+using Terraria.ID;
 
 namespace FaeLibrary.API {
     public class FaeUtils {
@@ -11,6 +12,11 @@ namespace FaeLibrary.API {
         public static void InsertShimmerResult(int result, int ingredient) {
             ItemID.Sets.ShimmerTransformToItem[result] = ItemID.Sets.ShimmerTransformToItem[ingredient];
             ItemID.Sets.ShimmerTransformToItem[ingredient] = result;
+        }
+
+
+        public static float DotProduct(Vector2 vec1, Vector2 vec2) {
+            return vec1.X * vec2.X + vec1.Y * vec2.Y;
         }
 
     }

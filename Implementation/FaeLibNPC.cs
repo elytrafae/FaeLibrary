@@ -15,7 +15,7 @@ namespace FaeLibrary.Implementation {
                 if (npc.buffTime[i] > 0) { // There is a buff here
                     ModBuff modBuff = ModContent.GetModBuff(npc.buffType[i]);
                     if (modBuff != null && modBuff is IFaeBuff faeBuff) {
-                        faeBuff.UpdateNPCLifeRegen(npc, ref i);
+                        faeBuff.UpdateNPCLifeRegen(npc, ref i, ref damage);
                     }
                 }
             }

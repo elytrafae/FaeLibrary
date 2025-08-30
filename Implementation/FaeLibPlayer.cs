@@ -70,8 +70,9 @@ namespace FaeLibrary.Implementation {
         }
 
         public override void UpdateBadLifeRegen() {
-            if (DisabledPositiveRegen && Player.lifeRegen > 0) {
-                Player.lifeRegen = 0;
+            if (DisabledPositiveRegen) {
+                Player.lifeRegen = Math.Min(Player.lifeRegen, 0);
+                Player.lifeRegenTime = 0;
             }
             Player.lifeRegen -= NegativeRegen;
             for (int i = 0; i < Player.MaxBuffs; i++) {

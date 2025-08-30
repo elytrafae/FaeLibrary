@@ -11,7 +11,7 @@ namespace FaeLibrary.API {
 
         public void UpdateLifeRegen(Player player, ref int buffIndex) { }
         public void UpdateBadLifeRegen(Player player, ref int buffIndex) { }
-        public void UpdateNPCLifeRegen(NPC npc, ref int buffIndex) { }
+        public void UpdateNPCLifeRegen(NPC npc, ref int buffIndex, ref int damage) { }
 
     }
 }

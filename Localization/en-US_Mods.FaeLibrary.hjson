@@ -17,6 +17,15 @@ ItemConditions: {
 
 ChargesText: Charges: {0}/{1}
 
+TimeTexts: {
+	QuarterSecond: a quarter second
+	HalfSecond: half a second
+	ThreeQuarterSecond: three quarters of a second
+	Ticks: "{0}/60th of a second"
+	Seconds: "{0} {^0:second;seconds}"
+	Minutes: "{0} {^0:minute;minutes}"
+}
+
 Configs: {
 	ClientConfig: {
 		DisplayName: Client Config

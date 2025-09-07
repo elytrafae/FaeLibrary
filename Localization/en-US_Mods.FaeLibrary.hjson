@@ -16,3 +16,19 @@ ItemConditions: {
 }
 
 ChargesText: Charges: {0}/{1}
+
+Configs: {
+	ClientConfig: {
+		DisplayName: Client Config
+
+		missingTextureEnabled: {
+			Label: Missing Texture Enabled
+			Tooltip:
+				'''
+				If this is enabled, Item, Buff, NPC and Projectile textures that are missing are replaced with a purple and black checkerboard.
+				NOTE: Turn this off before publishing a mod!
+				For players, it's up to you if you set this on or not...
+				'''
+		}
+	}
+}

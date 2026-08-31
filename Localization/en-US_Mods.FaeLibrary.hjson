@@ -26,6 +26,11 @@ TimeTexts: {
 	Minutes: "{0} {^0:minute;minutes}"
 }
 
+EquipmentEffectSystem: {
+	IsAccessory: If worn as an accessory:
+	IsArmor: If worn as armor:
+}
+
 Configs: {
 	ClientConfig: {
 		DisplayName: Client Config
@@ -39,5 +44,16 @@ Configs: {
 				For players, it's up to you if you set this on or not...
 				'''
 		}
+	}
+}
+
+Items: {
+	TestAccessory: {
+		DisplayName: Test Accessory
+		Tooltip:
+			'''
+			I, uh...
+			I don't even know that this is supposed to do.
+			'''
 	}
 }

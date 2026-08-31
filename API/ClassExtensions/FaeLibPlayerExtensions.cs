@@ -16,6 +16,8 @@ namespace FaeLibrary.API.ClassExtensions {
         public static ref StatModifier GetWingTimeStat(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().WingTime;
         public static ref StatModifier GetPotionHealingStat(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().PotionHealEffectiveness;
         public static ref StatModifier GetPotionManaStat(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().PotionManaEffectiveness;
+        public static ref StatModifier GetMaxHealthStat(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().MaxHealth;
+        public static ref StatModifier GetMaxManaStat(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().MaxMana;
         public static ref int GetCommonPositiveRegenStat(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().PositiveRegen;
         public static ref int GetCommonNegativeRegenStat(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().NegativeRegen;
         public static ref bool GetCommonDisabledPositiveRegenStat(this Player player) => ref player.GetModPlayer<FaeLibPlayer>().DisabledPositiveRegen;

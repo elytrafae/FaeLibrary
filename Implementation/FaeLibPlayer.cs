@@ -18,6 +18,8 @@ namespace FaeLibrary.Implementation {
         public StatModifier WingTime = new();
         public StatModifier PotionHealEffectiveness = new();
         public StatModifier PotionManaEffectiveness = new();
+        public StatModifier MaxHealth = new();
+        public StatModifier MaxMana = new();
         public int PositiveRegen = 0;
         public int NegativeRegen = 0;
         public bool DisabledPositiveRegen = false;
@@ -32,6 +34,8 @@ namespace FaeLibrary.Implementation {
             WingTime = new();
             PotionHealEffectiveness = new();
             PotionManaEffectiveness = new();
+            MaxHealth = new();
+            MaxMana = new();
             PositiveRegen = 0;
             NegativeRegen = 0;
             DisabledPositiveRegen = false;
@@ -48,6 +52,8 @@ namespace FaeLibrary.Implementation {
 
         public override void PostUpdateMiscEffects() {
             Player.wingTimeMax = (int)WingTime.ApplyTo(Player.wingTimeMax);
+            Player.statLifeMax2 = (int)MaxHealth.ApplyTo(Player.statLifeMax2);
+            Player.statManaMax2 = (int)MaxMana.ApplyTo(Player.statManaMax2);
 
             // Rocket flight time, for some reason, is not actually reset, so I cannot do this.
             // Rocket time stacking with flight time is also kinda weird the moment you try to add flat/base time...

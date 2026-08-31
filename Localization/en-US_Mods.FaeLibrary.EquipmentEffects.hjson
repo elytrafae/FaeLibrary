@@ -1,0 +1,314 @@
+MaxHealth: {
+	BasePositive: Increases maximum life by {0}
+	BaseNegative: Decreases maximum life by {0}
+	AdditivePositive: "{0}% increased maximum life"
+	AdditiveNegative: "{0}% decreased maximum life"
+	FlatPositive: Increases maximum life by a flat {0}
+	FlatNegative: Decreases maximum life by a flat {0}
+	Multiplicative: Multiplies maximum life by {0}x
+}
+
+MaxMana: {
+	BasePositive: Increases maximum mana by {0}
+	BaseNegative: Decreases maximum mana by {0}
+	AdditivePositive: "{0}% increased maximum mana"
+	AdditiveNegative: "{0}% decreased maximum mana"
+	FlatPositive: Increases maximum mana by a flat {0}
+	FlatNegative: Decreases maximum mana by a flat {0}
+	Multiplicative: Multiplies maximum mana by {0}x
+}
+
+MaxManaPositive: Increases maximum mana by {0}
+MaxManaNegative: Decreases maximum mana by {0}
+MovementSpeedPositive: "{0}% increased movement speed"
+MovementSpeedNegative: "{0}% decreased movement speed"
+
+MeleeDamageClass: {
+	Damage: {
+		BasePositive: Increases base melee damage by {0}
+		BaseNegative: Decreases base melee damage by {0}
+		AdditivePositive: "{0}% increased melee damage"
+		AdditiveNegative: "{0}% decreased melee damage"
+		FlatPositive: Increases melee damage by a flat {0}
+		FlatNegative: Decreases melee damage by a flat {0}
+		Multiplicative: Multiplies melee damage by {0}x
+	}
+
+	Knockback: {
+		BasePositive: Increases base melee knockback by {0}
+		BaseNegative: Decreases base melee knockback by {0}
+		AdditivePositive: "{0}% increased melee knockback"
+		AdditiveNegative: "{0}% decreased melee knockback"
+		FlatPositive: Increases melee knockback by a flat {0}
+		FlatNegative: Decreases melee knockback by a flat {0}
+		Multiplicative: Multiplies melee knockback by {0}x
+	}
+
+	AttackSpeedPositive: "{0}% increased melee attack speed"
+	AttackSpeedNegative: "{0}% decreased melee attack speed"
+	ArmorPenetrationPositive: "{0}% increased melee armor penetration"
+	ArmorPenetrationNegative: "{0}% decreased melee armor penetration"
+	CritChancePositive: "{0}% increased melee crit chance"
+	CritChanceNegative: "{0}% decreased melee crit chance"
+}
+
+MeleeNoSpeedDamageClass: {
+	Damage: {
+		BasePositive: Increases base melee damage by {0}
+		BaseNegative: Decreases base melee damage by {0}
+		AdditivePositive: "{0}% increased melee damage"
+		AdditiveNegative: "{0}% decreased melee damage"
+		FlatPositive: Increases melee damage by a flat {0}
+		FlatNegative: Decreases melee damage by a flat {0}
+		Multiplicative: Multiplies melee damage by {0}x
+	}
+
+	Knockback: {
+		BasePositive: Increases base melee knockback by {0}
+		BaseNegative: Decreases base melee knockback by {0}
+		AdditivePositive: "{0}% increased melee knockback"
+		AdditiveNegative: "{0}% decreased melee knockback"
+		FlatPositive: Increases melee knockback by a flat {0}
+		FlatNegative: Decreases melee knockback by a flat {0}
+		Multiplicative: Multiplies melee knockback by {0}x
+	}
+
+	AttackSpeedPositive: "{0}% increased melee attack speed"
+	AttackSpeedNegative: "{0}% decreased melee attack speed"
+	ArmorPenetrationPositive: "{0}% increased melee armor penetration"
+	ArmorPenetrationNegative: "{0}% decreased melee armor penetration"
+	CritChancePositive: "{0}% increased melee crit chance"
+	CritChanceNegative: "{0}% decreased melee crit chance"
+}
+
+RangedDamageClass: {
+	Damage: {
+		BasePositive: Increases base ranged damage by {0}
+		BaseNegative: Decreases base ranged damage by {0}
+		AdditivePositive: "{0}% increased ranged damage"
+		AdditiveNegative: "{0}% decreased ranged damage"
+		FlatPositive: Increases ranged damage by a flat {0}
+		FlatNegative: Decreases ranged damage by a flat {0}
+		Multiplicative: Multiplies ranged damage by {0}x
+	}
+
+	Knockback: {
+		BasePositive: Increases base ranged knockback by {0}
+		BaseNegative: Decreases base ranged knockback by {0}
+		AdditivePositive: "{0}% increased ranged knockback"
+		AdditiveNegative: "{0}% decreased ranged knockback"
+		FlatPositive: Increases ranged knockback by a flat {0}
+		FlatNegative: Decreases ranged knockback by a flat {0}
+		Multiplicative: Multiplies ranged knockback by {0}x
+	}
+
+	AttackSpeedPositive: "{0}% increased ranged attack speed"
+	AttackSpeedNegative: "{0}% decreased ranged attack speed"
+	ArmorPenetrationPositive: "{0}% increased ranged armor penetration"
+	ArmorPenetrationNegative: "{0}% decreased ranged armor penetration"
+	CritChancePositive: "{0}% increased ranged crit chance"
+	CritChanceNegative: "{0}% decreased ranged crit chance"
+}
+
+MagicDamageClass: {
+	Damage: {
+		BasePositive: Increases base magic damage by {0}
+		BaseNegative: Decreases base magic damage by {0}
+		AdditivePositive: "{0}% increased magic damage"
+		AdditiveNegative: "{0}% decreased magic damage"
+		FlatPositive: Increases magic damage by a flat {0}
+		FlatNegative: Decreases magic damage by a flat {0}
+		Multiplicative: Multiplies magic damage by {0}x
+	}
+
+	Knockback: {
+		BasePositive: Increases base magic knockback by {0}
+		BaseNegative: Decreases base magic knockback by {0}
+		AdditivePositive: "{0}% increased magic knockback"
+		AdditiveNegative: "{0}% decreased magic knockback"
+		FlatPositive: Increases magic knockback by a flat {0}
+		FlatNegative: Decreases magic knockback by a flat {0}
+		Multiplicative: Multiplies magic knockback by {0}x
+	}
+
+	AttackSpeedPositive: "{0}% increased magic attack speed"
+	AttackSpeedNegative: "{0}% decreased magic attack speed"
+	ArmorPenetrationPositive: "{0}% increased magic armor penetration"
+	ArmorPenetrationNegative: "{0}% decreased magic armor penetration"
+	CritChancePositive: "{0}% increased magic crit chance"
+	CritChanceNegative: "{0}% decreased magic crit chance"
+}
+
+SummonDamageClass: {
+	Damage: {
+		BasePositive: Increases base summon damage by {0}
+		BaseNegative: Decreases base summon damage by {0}
+		AdditivePositive: "{0}% increased summon damage"
+		AdditiveNegative: "{0}% decreased summon damage"
+		FlatPositive: Increases summon damage by a flat {0}
+		FlatNegative: Decreases summon damage by a flat {0}
+		Multiplicative: Multiplies summon damage by {0}x
+	}
+
+	Knockback: {
+		BasePositive: Increases base summon knockback by {0}
+		BaseNegative: Decreases base summon knockback by {0}
+		AdditivePositive: "{0}% increased summon knockback"
+		AdditiveNegative: "{0}% decreased summon knockback"
+		FlatPositive: Increases summon knockback by a flat {0}
+		FlatNegative: Decreases summon knockback by a flat {0}
+		Multiplicative: Multiplies summon knockback by {0}x
+	}
+
+	AttackSpeedPositive: "{0}% increased summon attack speed"
+	AttackSpeedNegative: "{0}% decreased summon attack speed"
+	ArmorPenetrationPositive: "{0}% increased summon armor penetration"
+	ArmorPenetrationNegative: "{0}% decreased summon armor penetration"
+	CritChancePositive: "{0}% increased summon crit chance"
+	CritChanceNegative: "{0}% decreased summon crit chance"
+}
+
+SummonMeleeSpeedDamageClass: {
+	Damage: {
+		BasePositive: Increases base whip damage by {0}
+		BaseNegative: Decreases base whip damage by {0}
+		AdditivePositive: "{0}% increased whip damage"
+		AdditiveNegative: "{0}% decreased whip damage"
+		FlatPositive: Increases whip damage by a flat {0}
+		FlatNegative: Decreases whip damage by a flat {0}
+		Multiplicative: Multiplies whip damage by {0}x
+	}
+
+	Knockback: {
+		BasePositive: Increases base whip knockback by {0}
+		BaseNegative: Decreases base whip knockback by {0}
+		AdditivePositive: "{0}% increased whip knockback"
+		AdditiveNegative: "{0}% decreased whip knockback"
+		FlatPositive: Increases whip knockback by a flat {0}
+		FlatNegative: Decreases whip knockback by a flat {0}
+		Multiplicative: Multiplies whip knockback by {0}x
+	}
+
+	AttackSpeedPositive: "{0}% increased whip attack speed"
+	AttackSpeedNegative: "{0}% decreased whip attack speed"
+	ArmorPenetrationPositive: "{0}% increased whip armor penetration"
+	ArmorPenetrationNegative: "{0}% decreased whip armor penetration"
+	CritChancePositive: "{0}% increased whip crit chance"
+	CritChanceNegative: "{0}% decreased whip crit chance"
+}
+
+MagicSummonHybridDamageClass: {
+	Damage: {
+		BasePositive: Increases base magic-summon damage by {0}
+		BaseNegative: Decreases base magic-summon damage by {0}
+		AdditivePositive: "{0}% increased magic-summon damage"
+		AdditiveNegative: "{0}% decreased magic-summon damage"
+		FlatPositive: Increases magic-summon damage by a flat {0}
+		FlatNegative: Decreases magic-summon damage by a flat {0}
+		Multiplicative: Multiplies magic-summon damage by {0}x
+	}
+
+	Knockback: {
+		BasePositive: Increases base magic-summon knockback by {0}
+		BaseNegative: Decreases base magic-summon knockback by {0}
+		AdditivePositive: "{0}% increased magic-summon knockback"
+		AdditiveNegative: "{0}% decreased magic-summon knockback"
+		FlatPositive: Increases magic-summon knockback by a flat {0}
+		FlatNegative: Decreases magic-summon knockback by a flat {0}
+		Multiplicative: Multiplies magic-summon knockback by {0}x
+	}
+
+	AttackSpeedPositive: "{0}% increased magic-summon attack speed"
+	AttackSpeedNegative: "{0}% decreased magic-summon attack speed"
+	ArmorPenetrationPositive: "{0}% increased magic-summon armor penetration"
+	ArmorPenetrationNegative: "{0}% decreased magic-summon armor penetration"
+	CritChancePositive: "{0}% increased magic-summon crit chance"
+	CritChanceNegative: "{0}% decreased magic-summon crit chance"
+}
+
+ThrowingDamageClass: {
+	Damage: {
+		BasePositive: Increases base throwing damage by {0}
+		BaseNegative: Decreases base throwing damage by {0}
+		AdditivePositive: "{0}% increased throwing damage"
+		AdditiveNegative: "{0}% decreased throwing damage"
+		FlatPositive: Increases throwing damage by a flat {0}
+		FlatNegative: Decreases throwing damage by a flat {0}
+		Multiplicative: Multiplies throwing damage by {0}x
+	}
+
+	Knockback: {
+		BasePositive: Increases base throwing knockback by {0}
+		BaseNegative: Decreases base throwing knockback by {0}
+		AdditivePositive: "{0}% increased throwing knockback"
+		AdditiveNegative: "{0}% decreased throwing knockback"
+		FlatPositive: Increases throwing knockback by a flat {0}
+		FlatNegative: Decreases throwing knockback by a flat {0}
+		Multiplicative: Multiplies throwing knockback by {0}x
+	}
+
+	AttackSpeedPositive: "{0}% increased throwing attack speed"
+	AttackSpeedNegative: "{0}% decreased throwing attack speed"
+	ArmorPenetrationPositive: "{0}% increased throwing armor penetration"
+	ArmorPenetrationNegative: "{0}% decreased throwing armor penetration"
+	CritChancePositive: "{0}% increased throwing crit chance"
+	CritChanceNegative: "{0}% decreased throwing crit chance"
+}
+
+DefaultDamageClass: {
+	Damage: {
+		BasePositive: Increases base default damage by {0}
+		BaseNegative: Decreases base default damage by {0}
+		AdditivePositive: "{0}% increased default damage"
+		AdditiveNegative: "{0}% decreased default damage"
+		FlatPositive: Increases default damage by a flat {0}
+		FlatNegative: Decreases default damage by a flat {0}
+		Multiplicative: Multiplies default damage by {0}x
+	}
+
+	Knockback: {
+		BasePositive: Increases base default knockback by {0}
+		BaseNegative: Decreases base default knockback by {0}
+		AdditivePositive: "{0}% increased default knockback"
+		AdditiveNegative: "{0}% decreased default knockback"
+		FlatPositive: Increases default knockback by a flat {0}
+		FlatNegative: Decreases default knockback by a flat {0}
+		Multiplicative: Multiplies default knockback by {0}x
+	}
+
+	AttackSpeedPositive: "{0}% increased default attack speed"
+	AttackSpeedNegative: "{0}% decreased default attack speed"
+	ArmorPenetrationPositive: "{0}% increased default armor penetration"
+	ArmorPenetrationNegative: "{0}% decreased default armor penetration"
+	CritChancePositive: "{0}% increased default crit chance"
+	CritChanceNegative: "{0}% decreased default crit chance"
+}
+
+GenericDamageClass: {
+	Damage: {
+		BasePositive: Increases base damage by {0}
+		BaseNegative: Decreases base damage by {0}
+		AdditivePositive: "{0}% increased damage"
+		AdditiveNegative: "{0}% decreased damage"
+		FlatPositive: Increases damage by a flat {0}
+		FlatNegative: Decreases damage by a flat {0}
+		Multiplicative: Multiplies damage by {0}x
+	}
+
+	Knockback: {
+		BasePositive: Increases base knockback by {0}
+		BaseNegative: Decreases base knockback by {0}
+		AdditivePositive: "{0}% increased knockback"
+		AdditiveNegative: "{0}% decreased knockback"
+		FlatPositive: Increases knockback by a flat {0}
+		FlatNegative: Decreases knockback by a flat {0}
+		Multiplicative: Multiplies knockback by {0}x
+	}
+
+	AttackSpeedPositive: "{0}% increased attack speed"
+	AttackSpeedNegative: "{0}% decreased attack speed"
+	ArmorPenetrationPositive: "{0}% increased armor penetration"
+	ArmorPenetrationNegative: "{0}% decreased armor penetration"
+	CritChancePositive: "{0}% increased crit chance"
+	CritChanceNegative: "{0}% decreased crit chance"
+}

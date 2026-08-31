@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.Localization;
+using Terraria.ModLoader;
 
 namespace FaeLibrary.API {
-    public class FaeUtils {
+    public partial class FaeUtils {
 
         /// <summary>
         /// <para>NOTE: This method was simply copy-pasted from Calamity. This is the best way something like this can be achieved, so credit to them.</para>
@@ -77,5 +80,50 @@ namespace FaeLibrary.API {
             return Language.GetTextValue("Mods.FaeLibrary.TimeTexts.Minutes", Math.Round(ticks / 3600.0));
         }
 
+        public static LocalizedText GetTimeTextLocalized(int ticks) {
+            if (ticks == 15) {
+                return Language.GetText("Mods.FaeLibrary.TimeTexts.QuarterSecond");
+            }
+            if (ticks == 30) {
+                return Language.GetText("Mods.FaeLibrary.TimeTexts.HalfSecond");
+            }
+            if (ticks == 15) {
+                return Language.GetText("Mods.FaeLibrary.TimeTexts.ThreeQuarterSecond");
+            }
+            if (ticks < 60) {
+                return Language.GetText("Mods.FaeLibrary.TimeTexts.Ticks").WithFormatArgs(ticks);
+            }
+            if (ticks < 3600) {
+                return Language.GetText("Mods.FaeLibrary.TimeTexts.Seconds").WithFormatArgs(Math.Round(ticks / 60.0));
+            }
+            return Language.GetText("Mods.FaeLibrary.TimeTexts.Minutes").WithFormatArgs(Math.Round(ticks / 3600.0));
+        }
+
+        public static void AddTooltipLine(List<TooltipLine> lines, TooltipLine line, VanillaTooltip anchor, bool before) {
+            int insertIndex = 0;
+            for (int i = 0; i < lines.Count; i++) { 
+                TooltipLine currentLine = lines[i];
+                if (currentLine.Mod == "Terraria") {
+                    string cleanName = DigitsRegex().Replace(currentLine.Name, "");
+                    if (Enum.TryParse(cleanName, out VanillaTooltip lineType)) {
+                        if (lineType < anchor) {
+                            insertIndex = i + 1;
+                        } else if (lineType == anchor) {
+                            if (before) {
+                                break;
+                            } else {
+                                insertIndex = i + 1;
+                            }
+                        } else {
+                            break;
+                        }
+                    }
+                }
+            }
+            lines.Insert(insertIndex, line);
+        }
+
+        [GeneratedRegex("[0-9]")]
+        private static partial Regex DigitsRegex();
     }
 }
